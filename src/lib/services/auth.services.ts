@@ -1,7 +1,5 @@
-// src/lib/services/auth.service.ts
 import type { User, LoginCredentials } from '$lib/types/user';
 
-// Mock de usuários (remova em produção)
 const MOCK_USERS: Record<string, { password: string; user: User }> = {
   'admin@example.com': {
     password: 'admin123',
@@ -27,7 +25,6 @@ const MOCK_USERS: Record<string, { password: string; user: User }> = {
 
 export const authService = {
   async login(credentials: LoginCredentials): Promise<{ token: string; user: User }> {
-    // Simula delay de rede
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     const mockUser = MOCK_USERS[credentials.email];
@@ -36,7 +33,6 @@ export const authService = {
       throw new Error('Email ou senha inválidos');
     }
 
-    // Gera token fake
     const token = btoa(`${credentials.email}:${Date.now()}`);
 
     return {
@@ -46,7 +42,6 @@ export const authService = {
   },
 
   async validateToken(token: string): Promise<User> {
-    // Simula validação
     await new Promise(resolve => setTimeout(resolve, 500));
 
     try {

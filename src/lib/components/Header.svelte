@@ -10,7 +10,7 @@
 <header
   class="w-full bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800"
 >
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+  <div class=" mx-auto px-4 py-3 flex items-center justify-between">
     <a href="/" class="text-xl font-bold text-zinc-900 dark:text-white">
       Nega<span class="text-blue-600">Dash</span>
     </a>
